@@ -18,8 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 // Connect to MongoDB first
 connectDB();
 
-// app.use('/api/disputes', userRoutes);
-app.get('/', (req, res) => res.send('working')); // ✅
+ app.use('/api/disputes', userRoutes);
 
 
 const PORT = process.env.PORT || 5000;
