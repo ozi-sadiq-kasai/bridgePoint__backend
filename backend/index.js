@@ -4,7 +4,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import connectDB from './config/db.js'; // import DB connection
 import userRoutes from './routes/userRoutes.js';
-import adminRoutes from './routes/admin.js'; // Import admin routes
+import adminRoutes from './routes/adminRoutes.js'; // Import admin routes
 import cors from 'cors';
 
 dotenv.config(); // load env variables
