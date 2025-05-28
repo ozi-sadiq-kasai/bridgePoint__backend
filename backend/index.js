@@ -4,6 +4,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import connectDB from './config/db.js'; // import DB connection
 import userRoutes from './routes/userRoutes.js';
+import cors from 'cors';
 
 dotenv.config(); // load env variables
 
@@ -14,6 +15,7 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors()); // Enable CORS for all routes
 
 // Connect to MongoDB first
 connectDB();
