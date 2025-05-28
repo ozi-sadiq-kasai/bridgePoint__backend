@@ -4,6 +4,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import connectDB from './config/db.js'; // import DB connection
 import userRoutes from './routes/userRoutes.js';
+import adminRoutes from './routes/admin.js'; // Import admin routes
 import cors from 'cors';
 
 dotenv.config(); // load env variables
@@ -31,6 +32,7 @@ app.use(cors({
 connectDB();
 
  app.use('/api/disputes', userRoutes);
+ app.use('/api/admin', adminRoutes); 
 
 
 const PORT = process.env.PORT || 5000;
