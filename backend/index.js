@@ -9,7 +9,8 @@ import cors from 'cors';
 
 dotenv.config(); // load env variables
 
-const allowedOrigins = ['http://localhost:5173', 'https://www.bridgepointodr.com'];
+const allowedOrigins = ['http://localhost:5173', 'https://www.bridgepointodr.com','https://bridgepointodr.com'];
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
